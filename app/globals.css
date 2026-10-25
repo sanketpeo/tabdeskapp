@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  .dark {
+    --background: #090e17;
+    --foreground: #f8fafc;
+    --card: #101726;
+    --card-foreground: #f8fafc;
+    --border: #1e293b;
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --muted: #172033;
+    --muted-foreground: #94a3b8;
+    --accent: #1e293b;
+    --accent-foreground: #93c5fd;
+  }
+}
+
+html,
+body {
+  background-color: #090e17;
+  color: #f8fafc;
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom dark soothing scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.45);
+}
+
+/* Realistic Scratchpad Paper Background Textures (Dark optimized) */
+.pad-ruled-lines {
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    rgba(148, 163, 184, 0.12) 32px
+  );
+  line-height: 32px !important;
+}
+
+.pad-grid-dots {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.25) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* Legal pad red margin rule */
+.pad-legal-margin {
+  border-left: 2px solid rgba(239, 68, 68, 0.35);
+  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+/* Range input styling for soothing smooth feel */
+input[type="range"] {
+  cursor: pointer;
+}
